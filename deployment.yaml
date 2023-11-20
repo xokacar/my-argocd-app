@@ -1,16 +1,19 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
-  name: my-argocd-app-deployment
+  name: verify-cluster
+  namespace: verify-cluster
+  labels:
+    app: verify-cluster
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: my-argocd-app
+      app: verify-cluster
   template:
     metadata:
       labels:
-        app: my-argocd-app
+        app: verify-cluster
     spec:
       containers:
         - name: my-argocd-app-container
