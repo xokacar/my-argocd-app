@@ -16,6 +16,6 @@ spec:
         app: verify-cluster
       containers:
         - name: my-argocd-app-container
-          image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
+          image: nginx:latest
           ports:
             - containerPort: {{ .Values.service.port }}
