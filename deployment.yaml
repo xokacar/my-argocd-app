@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: my-argocd-app-container
-          image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           ports:
             - containerPort: {{ .Values.service.port }}
