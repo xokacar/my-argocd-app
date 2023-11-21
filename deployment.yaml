@@ -6,7 +6,7 @@ metadata:
   labels:
     app: verify-cluster
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: verify-cluster
@@ -17,7 +17,6 @@ spec:
     spec:
       containers:
         - name: my-argocd-app-container
-          image: nginx:latest
+          image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
           ports:
-            - containerPort: 80
-            
+            - containerPort: {{ .Values.service.port }}
