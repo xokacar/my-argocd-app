@@ -1,13 +1,13 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: verify-cluster
-  namespace: verify-cluster
-spec: 
-  selector:
-    app: verify-cluster
-  ports: 
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: verify-cluster
+#   namespace: verify-cluster
+# spec: 
+#   selector:
+#     app: verify-cluster
+#   ports: 
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 80
+#   type: NodePort
